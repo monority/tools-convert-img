@@ -19,5 +19,6 @@ logs/
 # VS Code
 .vscode/
 
-images/
+/images/*
+!/images/.gitkeep
 origins/

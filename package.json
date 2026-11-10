@@ -4,9 +4,12 @@
   "description": "Image conversion and optimization tool",
   "main": "convert-images.mjs",
   "type": "module",
+  "engines": {
+    "node": ">=20.9.0"
+  },
   "dependencies": {
     "fast-glob": "^3.3.3",
-    "sharp": "^0.34.5"
+    "sharp": "^0.35.5"
   },
   "scripts": {
     "ci": "node convert-images.mjs",

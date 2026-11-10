@@ -24,8 +24,16 @@
 
 ## Installation
 
+Requires Node.js 20.9 or later and npm.
+
 ```bash
-npm install
+npm ci
+```
+
+Verify the CLI is available:
+
+```bash
+npm run ci -- --help
 ```
 
 ---
@@ -37,10 +45,16 @@ npm install
 Place images in the `images/` folder (subfolders supported), then run:
 
 ```bash
-npm run ci [prefix] [options]
+npm run ci
 ```
 
-Images are exported to the `optimized/` folder, preserving the original folder structure.
+This opens the interactive menu. To pass a prefix or options directly, put `--` before the CLI arguments:
+
+```bash
+npm run ci -- [prefix] [options]
+```
+
+For example, `npm run ci -- vacation -w 90`. Images are exported to the `optimized/` folder, preserving the original folder structure. Source images and generated output are ignored by Git.
 
 ---
 
@@ -114,7 +128,7 @@ Navigate with **↑ ↓** arrow keys, **Enter** to select.
 ```
 convert-img/
 ├── convert-images.mjs   # Main conversion script
-├── images/              # Source folder for images (create subfolders as needed)
+├── images/              # Source images (folder included; contents are ignored)
 ├── optimized/           # Output folder for optimized images
 └── package.json         # Dependencies and scripts
 ```
